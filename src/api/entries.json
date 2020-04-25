@@ -1,0 +1,20 @@
+{
+    "journalEntries": [
+    {
+        "id": 1,
+      "date": "4/17/20",
+      "title": "Objects and Arrays",
+      "contents":
+        "Today we went over Objects and Arrays, and how to call/replace information from them. ",
+      "mood": "Excited"
+    },
+    {
+        "id": 2,
+      "date": "4/24/20",
+      "title":"API Fetching",
+      "contents": "Learned how to pull down information from an API and populate it in an html document ",
+      "mood": "Tired"
+    }
+    
+  ]
+}

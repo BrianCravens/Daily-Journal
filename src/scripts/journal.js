@@ -1,32 +1,23 @@
-const journalEntry1 = {
-  date: "4/17/20",
-  title: "Objects and Arrays",
-  contents:
-    "Today we went over Objects and Arrays, and how to call/replace information from them. ",
-  mood: "Excited",
-};
-const journalEntry2 = {
-  date: "4/17/20",
-  title: "Objects and Arrays",
-  contents:
-    "Today we went over Objects and Arrays, and how to call/replace information from them. ",
-  mood: "Excited",
-};
-const journalEntry3 = {
-  date: "4/17/20",
-  title: "Objects and Arrays",
-  contents:
-    "Today we went over Objects and Arrays, and how to call/replace information from them. ",
-  mood: "Excited",
-};
-const journalEntry4 = {
-  date: "4/17/20",
-  title: "Objects and Arrays",
-  contents:
-    "Today we went over Objects and Arrays, and how to call/replace information from them. ",
-  mood: "Excited",
+fetch("http://localhost:8040/journalEntries")
+  .then((journal) => journal.json())
+  .then((parsedJournal) => {
+    parsedJournal.forEach((journalEntries) => {
+      const journalAsHtml = journalEntryComponent(journalEntries);
+      addJournalToDom(journalAsHtml);
+    });
+  });
+
+const addJournalAsHtml = document.querySelector("#journalLog");
+const addJournalToDom = (journalEntries) => {
+  document.querySelector("#journalLog").innerHTML += `${journalEntries}`;
 };
 
-let journalEntries = [];
-journalEntries.push(journalEntry1,journalEntry2,journalEntry3,journalEntry4);
-console.log(journalEntries);
+const journalEntryComponent = (entry) => {
+  return `
+  <h1>${entry.title}</h1>
+  <article>
+    <section>${entry.date}</section>
+    <section>${entry.contents}</section>
+    <section>${entry.mood}</section>
+  </article>`;
+};

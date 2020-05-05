@@ -1,23 +1,10 @@
-fetch("http://localhost:8040/journalEntries")
-  .then((journal) => journal.json())
-  .then((parsedJournal) => {
-    parsedJournal.forEach((journalEntries) => {
-      const journalAsHtml = journalEntryComponent(journalEntries);
-      addJournalToDom(journalAsHtml);
-    });
-  });
+/*
+    Main application logic that uses the functions and objects
+    defined in the other JavaScript files.
 
-const addJournalAsHtml = document.querySelector("#journalLog");
-const addJournalToDom = (journalEntries) => {
-  document.querySelector("#journalLog").innerHTML += `${journalEntries}`;
-};
+    Change the fake variable names below to what they should be
+    to get the data and display it.
+*/
 
-const journalEntryComponent = (entry) => {
-  return `
-  <h1>${entry.title}</h1>
-  <article>
-    <section>${entry.date}</section>
-    <section>${entry.contents}</section>
-    <section>${entry.mood}</section>
-  </article>`;
-};
+API.getJournalEntries().then(addJournalToDom)
+

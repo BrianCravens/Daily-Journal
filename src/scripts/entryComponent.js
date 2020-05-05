@@ -7,3 +7,4 @@ const journalEntryComponent = (entry) => {
       <section>${entry.mood}</section>
     </article>`;
   };
+  export default journalEntryComponent

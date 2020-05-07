@@ -12,7 +12,7 @@
       "date": "4/24/20",
       "title": "API Fetching",
       "contents": "Learned how to pull down information from an API and populate it in an html document ",
-      "mood": "Tired"
+      "mood": "Meh"
     },
     {
       "id": 3
@@ -54,6 +54,69 @@
       "contents": "lots of stuff",
       "mood": "sad",
       "id": 13
+    },
+    {
+      "date": "2020-05-07",
+      "title": "Deleting Objects From Arrays",
+      "contents": "Learned how to Delete Objects from arrays with the Delete method",
+      "mood": "excited",
+      "id": 14
+    },
+    {
+      "date": "2020-05-20",
+      "title": "ddd",
+      "contents": "asdfasdfasdfasdf",
+      "mood": "sad",
+      "id": 15
+    },
+    {
+      "date": "2020-05-07",
+      "title": "Oh Yeah",
+      "contents": "Gimme do Goods",
+      "mood": "sad",
+      "id": 16
+    },
+    {
+      "date": "2020-05-27",
+      "title": "Hello",
+      "contents": "Hello World",
+      "mood": "meh",
+      "id": 17
+    },
+    {
+      "date": "2020-05-07",
+      "title": "yoyoyoy",
+      "contents": "yoyoyoyoy",
+      "mood": "sad",
+      "id": 18
+    },
+    {
+      "date": "2020-05-07",
+      "title": "yoyoyoy",
+      "contents": "asdfassdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf",
+      "mood": "sad",
+      "id": 19
+    },
+    {
+      "date": "2020-05-07",
+      "title": "yoyoyoy",
+      "contents": "asdfassdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf",
+      "mood": "sad",
+      "id": 20
+    },
+    {
+      "date": "2020-05-07",
+      "title": "asdfas",
+      "contents": "asd",
+      "mood": "sad",
+      "id": 21
+    },
+    {
+      "date": "2020-05-07",
+      "title": "asdfss",
+      "contents": "asdfas",
+      "mood": "sad",
+      "id": 22
     }
   ]
 }

@@ -7,36 +7,30 @@
 */
 import API from "./data.js"
 import addJournalToDom from "./entriesDOM.js"
-// import domHolder from "./entriesDOM.js"
 import listEntries from "./entriesDOM.js"
 
-
-// getJournalEntries().then(domHolder.addJournalToDom)
-
 API.getJournalEntries()
-.then( (entriesData) => listEntries(entriesData))
-
+.then(entriesData => {listEntries.listEntries(entriesData.reverse())})
 
 document.querySelector("#recordLog").addEventListener("click", (event) => {
     event.preventDefault();
-    const date = document.querySelector("#journalDate").value;
-    const title = document.querySelector("#concepts").value;
-    const contents = document.querySelector("#journalEntry").value;
-    const mood = document.querySelector("#mood").value;
-    console.log(date)
-    
-    let newEntry = buildJournalEntry(date, title, contents, mood)
-    API.addNewEntry(newEntry)
-    // .then( data => {
-    //     return data.json()
-    // })
-    .then( dataJS => {
-        console.log ("dataJS", dataJS)
-        return API.getJournalEntries()
-    })
-    .then( entriesData => listEntries(entriesData))
-})
-
+    if (listEntries.checkLength()==false){}
+        else if (document.querySelector("#journalDate").value !=='' &&
+        document.querySelector("#concepts").value !=='' &&
+        document.querySelector("#journalEntry").value !=='' &&
+        document.querySelector("#mood").value !=='') {
+        const date = document.querySelector("#journalDate").value;
+        const title = document.querySelector("#concepts").value;
+        const contents = document.querySelector("#journalEntry").value;
+        const mood = document.querySelector("#mood").value;
+        let newEntry = buildJournalEntry(date, title, contents, mood)
+        API.addNewEntry(newEntry)
+        .then( dataJS => 
+        API.getJournalEntries()
+        .then(entriesData => {listEntries.listEntries(entriesData.reverse())}))
+        }
+        else window.alert("Please fill out all fields")   
+        })
 
 function buildJournalEntry(date, title, contents, mood){
     return ({
@@ -47,3 +41,12 @@ function buildJournalEntry(date, title, contents, mood){
     }
     )
 }
+document.getElementsByName("radioMood").forEach(element => element.addEventListener("click",(event) =>{
+    const moodSelected = event.target.value
+    API.getJournalEntries()
+    .then(entries => {
+        const filteredList = entries.filter(entry=> entry.mood == moodSelected)
+        listEntries.listEntries(filteredList.reverse())
+    })
+
+}))

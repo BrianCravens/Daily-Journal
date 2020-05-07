@@ -2,25 +2,32 @@
 import journalEntryComponent from "./entryComponent.js"
 
 const addJournalAsHtml = document.querySelector("#journalLog");
-// const domHolder = {
-//   addJournalToDom (journalEntries) {
-//   for (let i = 0; i < journalEntries.length; i++){
 
-//     addJournalAsHtml.innerHTML += journalEntryComponent(journalEntries[i]);
-//   }
-// }
-// }
-
-
-
-  function listEntries(entryArr) {
-  
+  function listEntries (entryArr) {
     addJournalAsHtml.innerHTML= ""
-
     entryArr.forEach( journalEntries => {
       addJournalAsHtml.innerHTML +=(journalEntryComponent(journalEntries))
       
     })
   }
 
-  export default listEntries
+  function checkLength(){
+    var title = document.querySelector("#concepts");
+    var textbox = document.querySelector("#journalEntry");
+
+    if (textbox.value.length > 20 || textbox.value.length < 5){
+      alert("Make sure the Journal Entry is between 5-20 characters long")
+      return false;
+    }
+      else if (title.value.length > 10 || title.value.length < 5){
+        alert("Make sure the Title is between 5-10 characters long")
+        return false;
+    }
+      else
+    {
+      return true;
+    }
+    
+  }
+
+  export default {listEntries, checkLength}

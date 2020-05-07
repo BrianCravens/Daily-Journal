@@ -27,8 +27,8 @@ document.querySelector("#recordLog").addEventListener("click", (event) => {
         API.addNewEntry(newEntry)
         .then( dataJS => 
         API.getJournalEntries()
-        .then(entriesData => {listEntries.listEntries(entriesData.reverse())}))
-        }
+        .then(entriesData => {listEntries.listEntries(entriesData.reverse())
+        }))}
         else window.alert("Please fill out all fields")   
         })
 
@@ -50,3 +50,16 @@ document.getElementsByName("radioMood").forEach(element => element.addEventListe
     })
 
 }))
+
+const journalOutputContainer = document.getElementById("journalLog")
+
+journalOutputContainer.addEventListener("click", (event) =>{
+    if (event.target.id.startsWith("delete--")) {
+        const entryId = event.target.id.split("--")[1]
+        console.log(entryId)
+        API.deleteEntry(entryId)
+        API.getJournalEntries()
+        .then(entriesData => {listEntries.listEntries(entriesData.reverse())
+        })
+    }
+})

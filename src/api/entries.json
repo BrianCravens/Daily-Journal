@@ -15,108 +15,11 @@
       "mood": "Meh"
     },
     {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
-    {
-      "id": 11
-    },
-    {
-      "date": "2020-05-21",
-      "title": "",
-      "contents": "",
-      "mood": "sad",
-      "id": 12
-    },
-    {
-      "date": "2020-05-29",
-      "title": "stuff",
-      "contents": "lots of stuff",
-      "mood": "sad",
-      "id": 13
-    },
-    {
       "date": "2020-05-07",
       "title": "Deleting Objects From Arrays",
       "contents": "Learned how to Delete Objects from arrays with the Delete method",
       "mood": "excited",
       "id": 14
-    },
-    {
-      "date": "2020-05-20",
-      "title": "ddd",
-      "contents": "asdfasdfasdfasdf",
-      "mood": "sad",
-      "id": 15
-    },
-    {
-      "date": "2020-05-07",
-      "title": "Oh Yeah",
-      "contents": "Gimme do Goods",
-      "mood": "sad",
-      "id": 16
-    },
-    {
-      "date": "2020-05-27",
-      "title": "Hello",
-      "contents": "Hello World",
-      "mood": "meh",
-      "id": 17
-    },
-    {
-      "date": "2020-05-07",
-      "title": "yoyoyoy",
-      "contents": "yoyoyoyoy",
-      "mood": "sad",
-      "id": 18
-    },
-    {
-      "date": "2020-05-07",
-      "title": "yoyoyoy",
-      "contents": "asdfassdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf",
-      "mood": "sad",
-      "id": 19
-    },
-    {
-      "date": "2020-05-07",
-      "title": "yoyoyoy",
-      "contents": "asdfassdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf",
-      "mood": "sad",
-      "id": 20
-    },
-    {
-      "date": "2020-05-07",
-      "title": "asdfas",
-      "contents": "asd",
-      "mood": "sad",
-      "id": 21
-    },
-    {
-      "date": "2020-05-07",
-      "title": "asdfss",
-      "contents": "asdfas",
-      "mood": "sad",
-      "id": 22
     }
   ]
 }

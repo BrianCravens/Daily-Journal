@@ -1,10 +1,9 @@
 const journalEntryComponent = (entry) => {
     return `
     <h1>${entry.title}</h1>
-    <article>
-      <section>${entry.date}</section>
-      <section>${entry.contents}</section>
-      <section>${entry.mood}</section>
-    </article>`;
+      <section class = journalItems>${entry.date}</section>
+      <section class = journalItems>${entry.contents}</section>
+      <section class = journalItems>${entry.mood}</section>
+      <button id="delete--${entry.id}" class = journalDelete>Delete</button>`;
   };
   export default journalEntryComponent

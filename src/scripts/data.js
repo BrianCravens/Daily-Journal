@@ -22,6 +22,19 @@ function deleteEntry(entryId){
           method: "DELETE"
     })
 }
+function updateEntry(entryObject, id) {
+    return fetch (`${apiURL}/${id}`, {
+        method: "PUT",
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entryObject)
+    })
+}
+function getEntryById (entryId){
+    return fetch (`${apiURL}/${entryId}`)
+    .then(data => data.json())
+}
   
 
-export default {getJournalEntries, addNewEntry, deleteEntry}
+export default {getJournalEntries, addNewEntry, deleteEntry, updateEntry, getEntryById}

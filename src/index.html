@@ -12,6 +12,7 @@
       <fieldset class="dailyJournal">
         <label for="journalDate">Date of entry</label>
         <input type="date" name="journalDate" id="journalDate" />
+        <input type="hidden" name="entryId" id="entryId" />
       </fieldset>
       <fieldset class="dailyJournal">
         <label for="concepts">Concepts covered</label>
@@ -31,6 +32,7 @@
         </select>
       </fieldset>
       <button id="recordLog">Record Journal Entry</button>
+      <button id="saveEdit">Save Edit</button>
       <fieldset id="filterMood">
         <legend>
           <label for="">Filter Journal Entries by Mood</label>

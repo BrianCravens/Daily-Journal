@@ -4,6 +4,7 @@ const journalEntryComponent = (entry) => {
       <section class = journalItems>${entry.date}</section>
       <section class = journalItems>${entry.contents}</section>
       <section class = journalItems>${entry.mood}</section>
+      <button id="edit--${entry.id}" class = journalEdit>Edit</button>
       <button id="delete--${entry.id}" class = journalDelete>Delete</button>`;
   };
   export default journalEntryComponent

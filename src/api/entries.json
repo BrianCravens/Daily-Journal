@@ -2,17 +2,17 @@
   "journalEntries": [
     {
       "id": 1,
-      "date": "4/17/20",
+      "date": "2020-04-17",
       "title": "Objects and Arrays",
       "contents": "Today we went over Objects and Arrays, and how to call/replace information from them. ",
-      "mood": "Excited"
+      "mood": "excited"
     },
     {
       "id": 2,
-      "date": "4/24/20",
+      "date": "2020-04-20",
       "title": "API Fetching",
       "contents": "Learned how to pull down information from an API and populate it in an html document ",
-      "mood": "Meh"
+      "mood": "meh"
     },
     {
       "date": "2020-05-07",
@@ -20,6 +20,20 @@
       "contents": "Learned how to Delete Objects from arrays with the Delete method",
       "mood": "excited",
       "id": 14
+    },
+    {
+      "date": "2020-05-11",
+      "title": "Editing",
+      "contents": "Editing Arrays",
+      "mood": "excited",
+      "id": 15
+    },
+    {
+      "date": "2020-05-11",
+      "title": "Finally",
+      "contents": "Finally Works",
+      "mood": "meh",
+      "id": 16
     }
   ]
 }

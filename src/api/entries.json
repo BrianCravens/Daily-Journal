@@ -5,35 +5,60 @@
       "date": "2020-04-17",
       "title": "Objects and Arrays",
       "contents": "Today we went over Objects and Arrays, and how to call/replace information from them. ",
-      "mood": "excited"
+      "moodId": "1"
     },
     {
       "id": 2,
       "date": "2020-04-20",
       "title": "API Fetching",
       "contents": "Learned how to pull down information from an API and populate it in an html document ",
-      "mood": "meh"
+      "moodId": "4"
     },
     {
       "date": "2020-05-07",
       "title": "Deleting Objects From Arrays",
       "contents": "Learned how to Delete Objects from arrays with the Delete method",
-      "mood": "excited",
+      "moodId": "2",
       "id": 14
     },
     {
       "date": "2020-05-11",
       "title": "Editing",
       "contents": "Editing Arrays",
-      "mood": "excited",
+      "moodId": "3",
       "id": 15
     },
     {
       "date": "2020-05-11",
       "title": "Finally",
       "contents": "Finally Works",
-      "mood": "meh",
+      "moodId": "4",
       "id": 16
+    },
+    {
+      "date": "2020-05-14",
+      "title": "Assessment",
+      "contents": "Completed Assessment of recent chapters covered.",
+      "moodId": "2",
+      "id": 18
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Happy"
+    },
+    {
+      "id": 2,
+      "label": "Excited"
+    },
+    {
+      "id": 3,
+      "label": "Sad"
+    },
+    {
+      "id": 4,
+      "label": "Meh"
     }
   ]
 }

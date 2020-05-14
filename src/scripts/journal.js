@@ -24,7 +24,7 @@ function prepopulateForm(entry){
     date.value = entry.date
     title.value = entry.title
     contents.value = entry.contents
-    mood.value = entry.mood
+    mood.value = entry.moodId
     journalEntryId.value = entry.id
 }
 function clearForm(){
@@ -59,7 +59,7 @@ function buildJournalEntry(date, title, contents, mood){
         date: date,
         title: title,
         contents: contents,
-        mood: mood
+        moodId: mood
     }
     )
 }
@@ -67,9 +67,10 @@ document.getElementsByName("radioMood").forEach(element => element.addEventListe
     const moodSelected = event.target.value
     API.getJournalEntries()
     .then(entries => {
-        const filteredList = entries.filter(entry=> entry.mood == moodSelected)
+        const filteredList = entries.filter(entry=> entry.mood.id == moodSelected)
         listEntries.listEntries(filteredList.reverse())
     })
+    clearForm()
 
 }))
 
@@ -78,9 +79,10 @@ journalOutputContainer.addEventListener("click", (event) =>{
     if (event.target.id.startsWith("delete--")) {
         const entryId = event.target.id.split("--")[1]
         API.deleteEntry(entryId)
+        .then( dataJS =>
         API.getJournalEntries()
         .then(entriesData => {listEntries.listEntries(entriesData.reverse())
-        })
+        }))
     }
     else if (event.target.id.startsWith("edit--")){
         const entryId = event.target.id.split("--")[1]
@@ -89,6 +91,9 @@ journalOutputContainer.addEventListener("click", (event) =>{
             prepopulateForm(entry)
             console.log(entryId)
         })
+    }
+    else if (event.target.id.startsWith("clear")){
+        clearForm()
     }
 })
 
@@ -100,13 +105,18 @@ saveEditBtn.addEventListener("click", event =>{
         "date": date.value,
         "title": title.value,
         "contents": contents.value,
-        "mood": mood.value
+        "moodId": mood.value
         }
-    if (entryId != ""){
+    if (listEntries.checkLength() == false){}
+    else if (entryId != "" && document.querySelector("#journalDate").value !=='' &&
+    document.querySelector("#concepts").value !=='' &&
+    document.querySelector("#journalEntry").value !=='' &&
+    document.querySelector("#mood").value !==''){
         console.log("Id present")
         API.updateEntry(entryFormValues, entryId)
+        .then(dataJS =>
         API.getJournalEntries()
-        .then(entriesData => {listEntries.listEntries(entriesData.reverse())})
-    }
+        .then(entriesData => {listEntries.listEntries(entriesData.reverse())}))
+    }else{window.alert("Please fill out all fields")}
 
 })

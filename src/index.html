@@ -12,6 +12,9 @@
       <fieldset class="dailyJournal">
         <label for="journalDate">Date of entry</label>
         <input type="date" name="journalDate" id="journalDate" />
+          <div class = clearParent>
+            <button class= "clearButton" id = clearBtn>Clear Form</button>
+          </div>
         <input type="hidden" name="entryId" id="entryId" />
       </fieldset>
       <fieldset class="dailyJournal">
@@ -24,27 +27,29 @@
       </fieldset>
       <fieldset class="dailyJournal">
         <label for="Mood for the day">Mood for the day</label>
-        <select name="mood" id="mood">
-          <option value="sad">Sad</option>
-          <option value="happy">Happy</option>
-          <option value="excited">Excited</option>
-          <option value="meh">Meh</option>
+        <select  class = "selectMood" name="mood" id="mood">
+          <option value="3">Sad</option>
+          <option value="1">Happy</option>
+          <option value="2">Excited</option>
+          <option value="4">Meh</option>
         </select>
       </fieldset>
-      <button id="recordLog">Record Journal Entry</button>
-      <button id="saveEdit">Save Edit</button>
-      <fieldset id="filterMood">
+          <div class="recordJournalDiv">
+          <button class= "recordJournalButon" id="recordLog">Record Journal Entry</button>
+          <button class= "saveEditButton" id="saveEdit">Save Edit</button>
+          </div>
+      <fieldset class="filterMoodContainer" id="filterMood">
         <legend>
-          <label for="">Filter Journal Entries by Mood</label>
+          <label class= "filterMoodLegend"for="">Filter Journal Entries by Mood</label>
         </legend>
           <label for="radioSad">Sad</label>
-          <input value="sad" name="radioMood" type="radio" id="radioSad">
+          <input value="3" name="radioMood" type="radio" id="radioSad">
           <label for="radioHappy">Happy</label>
-          <input value="happy" name="radioMood" type="radio" id="radioHappy">
+          <input value="1" name="radioMood" type="radio" id="radioHappy">
           <label for="radioExcited">Excited</label>
-          <input value="excited" name="radioMood" type="radio" id="radioExcited">
+          <input value="2" name="radioMood" type="radio" id="radioExcited">
           <label for="radioMeh">Meh</label>
-          <input value="meh" name="radioMood" type="radio" id="radioMeh">
+          <input value="4" name="radioMood" type="radio" id="radioMeh">
       </fieldset>
     </form>
 

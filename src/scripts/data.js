@@ -1,14 +1,14 @@
 const apiURL = "http://localhost:8040/journalEntries"
 
 function getJournalEntries () {
-        return fetch(`${apiURL}`)
+        return fetch(`${apiURL}?_expand=mood`)
         .then(journal => journal.json())
 }
 
 
 
 function addNewEntry(creation) {
-      return fetch (`${apiURL}`,{
+      return fetch (`${apiURL}?_expand=mood`,{
           method: "POST",
           headers:{
               "Content-Type": "application/json"
@@ -18,12 +18,12 @@ function addNewEntry(creation) {
 }
 
 function deleteEntry(entryId){
-      return fetch (`${apiURL}/${entryId}`,{
+      return fetch (`${apiURL}/${entryId}?_expand=mood`,{
           method: "DELETE"
     })
 }
 function updateEntry(entryObject, id) {
-    return fetch (`${apiURL}/${id}`, {
+    return fetch (`${apiURL}/${id}?_expand=mood`, {
         method: "PUT",
         headers:{
             "Content-Type": "application/json"
@@ -32,7 +32,7 @@ function updateEntry(entryObject, id) {
     })
 }
 function getEntryById (entryId){
-    return fetch (`${apiURL}/${entryId}`)
+    return fetch (`${apiURL}/${entryId}?_expand=mood`)
     .then(data => data.json())
 }
   

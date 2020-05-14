@@ -1,10 +1,109 @@
  .dailyJournal{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 2px solid black;
     justify-content: center;
     align-content: space-between;
     margin: 1px; 
+    background-color: rgb(179, 176, 175);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+ body>h1{
+   font-variant: small-caps;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+ body{
+    background-color: rgb(179, 176, 175);
+ }
+.dailyJournal>label{
+    font-weight: bold;
+    font-variant: small-caps;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+.clearButton{
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-weight: bold;
+    border: black solid 2px;
+}
+ .clearParent{
+    display: flex;
+    justify-content: flex-end;
  }
 
+ .journalItemsContainer{
+    border: 2px solid black;
+    padding-left: 2em;
+    background-color: springgreen;
+ }
+ #concepts{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+ }
+ #journalEntry{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+ }
+ #recordLog{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    border: black solid 2px;
+    
+ }
+ #saveEdit{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    border: black solid 2px;
+ }
+ .journalItems{
+    font-size: large; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
 
+ .entryTitle{
+    font-variant: small-caps;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+ .journalEdit{
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-weight: bold;
+   border: black solid 2px;
+   margin-bottom: 2px;
+
+ }
+ .journalDelete{
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-weight: bold;
+   border: black solid 2px;
+   margin-bottom: 2px;
+
+}
+ .journalEditDiv{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+
+ }
+ .journalDelete{
+   margin-left: 5px;
+ }
+.recordJournalDiv{
+   background-color: rgb(179, 176, 175);
+   display: flex;
+   justify-content: flex-end;
+   margin-bottom: none;
+}
+.saveEditButton{
+   margin-left: 5px;
+}
+.filterMoodContainer{
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   border: 2px solid black;
+   background-color: rgb(179, 176, 175)
+}
+.selectMood{
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.filterMoodLegend{
+   font-weight: bold;
+   font-variant: small-caps;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
